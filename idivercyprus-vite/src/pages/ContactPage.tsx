@@ -1,0 +1,164 @@
+import { Button } from '../components/ui/button'
+import { Input } from '../components/ui/input'
+import { Textarea } from '../components/ui/textarea'
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
+import { Mail, Phone, MapPin, Clock } from 'lucide-react'
+import Footer from '../components/Footer'
+import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
+
+const containerStyle = {
+  width: '100%',
+  height: '100%',
+};
+
+const center = {
+  lat: 35.0146337, // Corrected Latitude
+  lng: 34.0505644, // Corrected Longitude
+};
+
+const googleMapsUrl = 'https://www.google.com/maps/place/Protara+29,+Paralimni+5296,+Cyprus/@35.0146337,34.0505644,17z/';
+
+export default function ContactPage() {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_KEY,
+  });
+
+  return (
+    <div className="min-h-screen bg-slate-900 pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Contact Us</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Ready to dive into your next adventure? Get in touch with us to book your diving experience or ask any questions.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <Card className="bg-slate-800/50 border-slate-700">
+              <CardHeader>
+                <CardTitle className="text-white text-2xl">Send us a Message</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                    <Input
+                      placeholder="Your name"
+                      className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                    <Input
+                      type="email"
+                      placeholder="your@email.com"
+                      className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                  <Input
+                    placeholder="What's this about?"
+                    className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                  <Textarea
+                    placeholder="Tell us about your diving experience or questions..."
+                    rows={6}
+                    className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
+                  />
+                </div>
+                <Button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3">
+                  Send Message
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="space-y-8">
+            <Card className="bg-slate-800/50 border-slate-700">
+              <CardHeader>
+                <CardTitle className="text-white text-2xl">Get in Touch</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-cyan-500/20 p-3 rounded-full">
+                    <Mail className="h-6 w-6 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold mb-1">Email</h3>
+                    <p className="text-gray-300">info@idivercyprus.com</p>
+                    <p className="text-gray-300">bookings@idivercyprus.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-cyan-500/20 p-3 rounded-full">
+                    <Phone className="h-6 w-6 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold mb-1">Phone</h3>
+                    <p className="text-gray-300">+357 996 899 61</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-cyan-500/20 p-3 rounded-full">
+                    <MapPin className="h-6 w-6 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold mb-1">Location</h3>
+                    <p className="text-gray-300">Protara 29, Protaras Cyprus,</p>
+                    <p className="text-300">Paralimni 5296 Cyprus</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-cyan-500/20 p-3 rounded-full">
+                    <Clock className="h-6 w-6 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold mb-1">Hours</h3>
+                    <p className="text-gray-300">Mon - Sun: 7:00 AM - 7:00 PM</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800/50 border-slate-700">
+              <CardHeader>
+                <CardTitle className="text-white text-2xl">Find Us</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-slate-700 rounded-lg h-64 overflow-hidden">
+                  {isLoaded ? (
+                    <GoogleMap
+                      mapContainerStyle={containerStyle}
+                      center={center}
+                      zoom={15}
+                    >
+                      <MarkerF
+                        position={center}
+                        onClick={() => window.open(googleMapsUrl, '_blank')}
+                      />
+                    </GoogleMap>
+                  ) : (
+                    <div className="text-gray-300 text-center flex items-center justify-center h-full">
+                      Loading Map...
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  )
+}
