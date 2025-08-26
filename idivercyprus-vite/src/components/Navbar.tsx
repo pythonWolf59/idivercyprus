@@ -27,6 +27,14 @@ export default function Navbar() {
               Home
             </Link>
             <Link
+              to="/about"
+              className={`transition-colors ${
+                isActive('/about') ? 'text-cyan-400' : 'text-white hover:text-cyan-400'
+              }`}
+            >
+              About
+            </Link>
+            <Link
               to="/services"
               className={`transition-colors ${
                 isActive('/services') ? 'text-cyan-400' : 'text-white hover:text-cyan-400'
@@ -63,6 +71,15 @@ export default function Navbar() {
                 }`}
               >
                 Home
+              </Link>
+              <Link
+                to="/about"
+                onClick={() => setIsOpen(false)}
+                className={`block px-3 py-2 rounded-md transition-colors ${
+                  isActive('/about') ? 'text-cyan-400 bg-slate-700' : 'text-white hover:text-cyan-400 hover:bg-slate-700'
+                }`}
+              >
+                About
               </Link>
               <Link
                 to="/services"
