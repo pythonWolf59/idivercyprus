@@ -36,48 +36,61 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <Card className="bg-slate-800/50 border-slate-700">
-              <CardHeader>
-                <CardTitle className="text-white text-2xl">Send us a Message</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                    <Input
-                      placeholder="Your name"
-                      className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                    <Input
-                      type="email"
-                      placeholder="your@email.com"
-                      className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
-                  <Input
-                    placeholder="What's this about?"
-                    className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                  <Textarea
-                    placeholder="Tell us about your diving experience or questions..."
-                    rows={6}
-                    className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
-                  />
-                </div>
-                <Button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3">
-                  Send Message
-                </Button>
-              </CardContent>
-            </Card>
+
+              <form action="https://formspree.io/f/mandyloo" method="POST">
+  <Card className="bg-slate-800/50 border-slate-700">
+    <CardHeader>
+      <CardTitle className="text-white text-2xl">Send us a Message</CardTitle>
+    </CardHeader>
+    <CardContent className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Name</label>
+          <Input
+            id="name"
+            name="name"
+            placeholder="Your name"
+            className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="your@email.com"
+            className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
+          />
+        </div>
+      </div>
+      <div>
+        <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+        <Input
+          id="subject"
+          name="subject"
+          placeholder="What's this about?"
+          className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
+        />
+      </div>
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message</label>
+        <Textarea
+          id="message"
+          name="message"
+          placeholder="Tell us about your diving experience or questions..."
+          rows={6}
+          className="bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500"
+        />
+      </div>
+      <Button type="submit" className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3">
+        Send Message
+      </Button>
+    </CardContent>
+  </Card>
+</form>
+
+
           </div>
 
           <div className="space-y-8">
