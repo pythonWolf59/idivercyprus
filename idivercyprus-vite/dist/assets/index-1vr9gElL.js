@@ -18399,26 +18399,12 @@ const createLucideIcon = (iconName, iconNode) => {
  */
 
 
-const __iconNode$k = [
+const __iconNode$j = [
   ["path", { d: "M12 22V8", key: "qkxhtm" }],
   ["path", { d: "M5 12H2a10 10 0 0 0 20 0h-3", key: "1hv3nh" }],
   ["circle", { cx: "12", cy: "5", r: "3", key: "rqqgnr" }]
 ];
-const Anchor = createLucideIcon("anchor", __iconNode$k);
-
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$j = [
-  ["path", { d: "M12 5v14", key: "s699le" }],
-  ["path", { d: "m19 12-7 7-7-7", key: "1idqje" }]
-];
-const ArrowDown = createLucideIcon("arrow-down", __iconNode$j);
+const Anchor = createLucideIcon("anchor", __iconNode$j);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18429,6 +18415,20 @@ const ArrowDown = createLucideIcon("arrow-down", __iconNode$j);
 
 
 const __iconNode$i = [
+  ["path", { d: "M12 5v14", key: "s699le" }],
+  ["path", { d: "m19 12-7 7-7-7", key: "1idqje" }]
+];
+const ArrowDown = createLucideIcon("arrow-down", __iconNode$i);
+
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$h = [
   [
     "path",
     {
@@ -18438,7 +18438,7 @@ const __iconNode$i = [
   ],
   ["circle", { cx: "12", cy: "8", r: "6", key: "1vp47v" }]
 ];
-const Award = createLucideIcon("award", __iconNode$i);
+const Award = createLucideIcon("award", __iconNode$h);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18448,22 +18448,8 @@ const Award = createLucideIcon("award", __iconNode$i);
  */
 
 
-const __iconNode$h = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$h);
-
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$g = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
-];
-const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$g);
+const __iconNode$g = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$g);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -30834,22 +30820,6 @@ function ContactPage() {
     id: "google-map-script",
     googleMapsApiKey: undefined                                    
   });
-  const [success, setSuccess] = reactExports.useState(false);
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    const res = await fetch("https://formspree.io/f/mandyloo", {
-      method: "POST",
-      body: data,
-      headers: { Accept: "application/json" }
-    });
-    if (res.ok) {
-      form.reset();
-      setSuccess(true);
-      setTimeout(() => setSuccess(false), 3e3);
-    }
-  };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-slate-900 pt-16 relative", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
@@ -30857,8 +30827,9 @@ function ContactPage() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 max-w-3xl mx-auto", children: "Ready to dive into your next adventure? Get in touch with us to book your diving experience or ask any questions." })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-12", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("form", { onSubmit: handleSubmit, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "bg-slate-800/50 border-slate-700 relative", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { name: "contact", method: "POST", "data-netlify": "true", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "hidden", name: "form-name", value: "contact" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "bg-slate-800/50 border-slate-700 relative", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "text-white text-2xl", children: "Send us a Message" }) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { className: "space-y-6", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-4", children: [
@@ -30919,12 +30890,8 @@ function ContactPage() {
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { type: "submit", className: "w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3", children: "Send Message" })
             ] })
-          ] }) }),
-          success && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "fixed bottom-6 right-6 bg-green-600 text-white px-6 py-3 rounded-2xl shadow-lg flex items-center space-x-2 animate-fade-in-out", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "h-5 w-5" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Message sent successfully!" })
           ] })
-        ] }),
+        ] }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-8", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "bg-slate-800/50 border-slate-700", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "text-white text-2xl", children: "Get in Touch" }) }),

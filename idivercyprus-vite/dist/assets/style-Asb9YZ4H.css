@@ -63,7 +63,6 @@
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-yellow-400: oklch(85.2% .199 91.936);
-    --color-green-600: oklch(62.7% .194 149.214);
     --color-cyan-300: oklch(86.5% .127 207.078);
     --color-cyan-400: oklch(78.9% .154 211.53);
     --color-cyan-500: oklch(71.5% .143 215.221);
@@ -448,14 +447,6 @@
     top: calc(var(--spacing) * 0);
   }
 
-  .right-6 {
-    right: calc(var(--spacing) * 6);
-  }
-
-  .bottom-6 {
-    bottom: calc(var(--spacing) * 6);
-  }
-
   .bottom-8 {
     bottom: calc(var(--spacing) * 8);
   }
@@ -834,10 +825,6 @@
 
   .bg-gray-800 {
     background-color: var(--color-gray-800);
-  }
-
-  .bg-green-600 {
-    background-color: var(--color-green-600);
   }
 
   .bg-primary {
