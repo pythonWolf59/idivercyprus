@@ -18399,12 +18399,26 @@ const createLucideIcon = (iconName, iconNode) => {
  */
 
 
-const __iconNode$j = [
+const __iconNode$k = [
   ["path", { d: "M12 22V8", key: "qkxhtm" }],
   ["path", { d: "M5 12H2a10 10 0 0 0 20 0h-3", key: "1hv3nh" }],
   ["circle", { cx: "12", cy: "5", r: "3", key: "rqqgnr" }]
 ];
-const Anchor = createLucideIcon("anchor", __iconNode$j);
+const Anchor = createLucideIcon("anchor", __iconNode$k);
+
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$j = [
+  ["path", { d: "M12 5v14", key: "s699le" }],
+  ["path", { d: "m19 12-7 7-7-7", key: "1idqje" }]
+];
+const ArrowDown = createLucideIcon("arrow-down", __iconNode$j);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18415,20 +18429,6 @@ const Anchor = createLucideIcon("anchor", __iconNode$j);
 
 
 const __iconNode$i = [
-  ["path", { d: "M12 5v14", key: "s699le" }],
-  ["path", { d: "m19 12-7 7-7-7", key: "1idqje" }]
-];
-const ArrowDown = createLucideIcon("arrow-down", __iconNode$i);
-
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$h = [
   [
     "path",
     {
@@ -18438,7 +18438,7 @@ const __iconNode$h = [
   ],
   ["circle", { cx: "12", cy: "8", r: "6", key: "1vp47v" }]
 ];
-const Award = createLucideIcon("award", __iconNode$h);
+const Award = createLucideIcon("award", __iconNode$i);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18448,8 +18448,22 @@ const Award = createLucideIcon("award", __iconNode$h);
  */
 
 
-const __iconNode$g = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$g);
+const __iconNode$h = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$h);
+
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$g = [
+  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
+  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+];
+const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$g);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -30820,6 +30834,25 @@ function ContactPage() {
     id: "google-map-script",
     googleMapsApiKey: undefined                                    
   });
+  const [showSuccess, setShowSuccess] = reactExports.useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    formData.append("form-name", "contact");
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formData
+      });
+      form.reset();
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 3e3);
+    } catch (err) {
+      console.error("Form submission error:", err);
+      alert("Something went wrong. Please try again.");
+    }
+  };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-slate-900 pt-16 relative", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
@@ -30827,7 +30860,7 @@ function ContactPage() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 max-w-3xl mx-auto", children: "Ready to dive into your next adventure? Get in touch with us to book your diving experience or ask any questions." })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-12", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { name: "contact", method: "POST", "data-netlify": "true", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { name: "contact", method: "POST", "data-netlify": "true", onSubmit: handleSubmit, children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "hidden", name: "form-name", value: "contact" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "bg-slate-800/50 border-slate-700 relative", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "text-white text-2xl", children: "Send us a Message" }) }),
@@ -30900,8 +30933,7 @@ function ContactPage() {
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-cyan-500/20 p-3 rounded-full", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-6 w-6 text-cyan-400" }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-white font-semibold mb-1", children: "Email" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300", children: "info@idivercyprus.com" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300", children: "bookings@idivercyprus.com" })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300", children: "info@idivercyprus.com" })
                 ] })
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start space-x-4", children: [
@@ -30949,6 +30981,20 @@ function ContactPage() {
         ] })
       ] })
     ] }),
+    showSuccess && /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
+      {
+        className: "fixed inset-0 z-50 flex items-center justify-center bg-black/60",
+        role: "dialog",
+        "aria-modal": "true",
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white rounded-2xl shadow-xl p-6 max-w-sm w-full text-center mx-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { className: "h-12 w-12 text-green-500 mb-3" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-lg font-semibold text-gray-800 mb-1", children: "Message Sent!" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-600 mb-4", children: "Thanks — we received your message and will get back to you soon." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { onClick: () => setShowSuccess(false), className: "bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2", children: "Close" })
+        ] }) })
+      }
+    ),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
 }

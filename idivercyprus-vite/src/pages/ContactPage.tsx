@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 import { Textarea } from '../components/ui/textarea'
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
-import { Mail, Phone, MapPin, Clock } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, CheckCircle } from 'lucide-react'
 import Footer from '../components/Footer'
 import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
 
@@ -24,6 +25,37 @@ export default function ContactPage() {
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_KEY,
   });
 
+  // ---------- ADDED: local state for showing modal ----------
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  // ---------- ADDED: intercept submit, send to Netlify via fetch, reset form, show modal ----------
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // ensure Netlify knows which form it is
+    formData.append('form-name', 'contact');
+
+    try {
+      // POST to root so Netlify picks it up (same as normal form submit)
+      await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
+
+      // clear fields and show modal
+      form.reset();
+      setShowSuccess(true);
+
+      // auto-close modal after 3 seconds
+      setTimeout(() => setShowSuccess(false), 3000);
+    } catch (err) {
+      console.error('Form submission error:', err);
+      alert('Something went wrong. Please try again.');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-900 pt-16 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -36,8 +68,8 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            {/* ✅ Netlify Form */}
-            <form name="contact" method="POST" data-netlify="true">
+            {/* ✅ Netlify Form — kept attributes, added onSubmit */}
+            <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
               {/* Netlify requires hidden input */}
               <input type="hidden" name="form-name" value="contact" />
 
@@ -179,6 +211,27 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* ----------------- Success Modal ----------------- */}
+      {showSuccess && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="bg-white rounded-2xl shadow-xl p-6 max-w-sm w-full text-center mx-4">
+            <div className="flex flex-col items-center">
+              <CheckCircle className="h-12 w-12 text-green-500 mb-3" />
+              <h3 className="text-lg font-semibold text-gray-800 mb-1">Message Sent!</h3>
+              <p className="text-sm text-gray-600 mb-4">Thanks — we received your message and will get back to you soon.</p>
+              <Button onClick={() => setShowSuccess(false)} className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2">
+                Close
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   )
