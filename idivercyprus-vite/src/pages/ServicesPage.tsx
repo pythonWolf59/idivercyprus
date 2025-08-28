@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import Footer from "../components/Footer";
 
 export default function App() {
   const services = [
@@ -112,6 +113,8 @@ export default function App() {
       <div className="text-center py-8 text-gray-400">
         <p>&copy; {new Date().getFullYear()} IDiveCyprus. All rights reserved.</p>
       </div>
+      
+    < Footer />
     </div>
   );
 }

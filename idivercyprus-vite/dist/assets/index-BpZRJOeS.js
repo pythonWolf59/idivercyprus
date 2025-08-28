@@ -21557,47 +21557,51 @@ function Hero() {
   ] });
 }
 
-function App$3() {
+function App$4() {
+  const [activeCard, setActiveCard] = reactExports.useState(null);
   const experiences = [
     {
       id: 1,
       image: "https://silentworld.com/wp-content/uploads/2024/12/AdobeStock_49656996-min-scaled.jpeg.webp",
       title: "Courses",
       description: "Learn to dive with PADI & NAUI certifications.",
-      link: "/courses"
+      link: "/contact"
     },
     {
       id: 2,
       image: "/images/Fun Dives.jpg",
       title: "Fun Dives",
       description: "Explore Cyprus’s reefs, caves, and wrecks.",
-      link: "/fun-dives"
+      link: "/contact"
     },
     {
       id: 3,
       image: "/images/cover1.jpeg",
       title: "Specialty Dives",
       description: "Deep, wreck, Nitrox, night diving adventures and more.",
-      link: "/specialty-dives"
+      link: "/contact"
     },
     {
       id: 4,
       image: "https://www.mauiinn.com/wp-content/uploads/2025/02/Woman_Snorkeling.jpg",
       title: "Snorkeling",
       description: "Family-friendly fun for non-divers.",
-      link: "/snorkeling"
+      link: "/contact"
     }
   ];
+  const handleTouch = (id) => {
+    setActiveCard(activeCard === id ? null : id);
+  };
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-20 md:py-32 bg-slate-900", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-4", children: "Our Diving Experiences" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 max-w-3xl mx-auto", children: "From beginner courses to advanced specialty dives, we have an adventure for everyone." })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8", children: experiences.map((item) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "a",
+      "div",
       {
-        href: item.link,
-        className: "group relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 transform hover:scale-105",
+        className: "group relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 transform",
+        onTouchStart: () => handleTouch(item.id),
         children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             "img",
@@ -21607,13 +21611,25 @@ function App$3() {
               className: "w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
             }
           ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-6 text-white transition-opacity duration-500 opacity-0 group-hover:opacity-100", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "transform translate-y-8 transition-transform duration-500 group-hover:translate-y-0", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-bold mb-2", children: item.title }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 text-sm", children: item.description })
-          ] }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-x-0 bottom-0 p-6 flex justify-between items-center bg-slate-800/80 backdrop-blur-sm opacity-100 group-hover:opacity-0 transition-opacity duration-300", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "div",
+            {
+              className: `absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-6 text-white transition-opacity duration-500 ${activeCard === item.id ? "opacity-100" : "opacity-0"} md:group-hover:opacity-100`,
+              children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                "div",
+                {
+                  className: `transform transition-transform duration-500 ${activeCard === item.id ? "translate-y-0" : "translate-y-8"} md:group-hover:translate-y-0`,
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-bold mb-2", children: item.title }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 text-sm", children: item.description })
+                  ]
+                }
+              )
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `absolute inset-x-0 bottom-0 p-6 flex justify-between items-center bg-slate-800/80 backdrop-blur-sm transition-opacity duration-300 ${activeCard === item.id ? "opacity-0" : "opacity-100"} md:group-hover:opacity-0`, children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-bold text-white", children: item.title }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-6 w-6 text-cyan-400 group-hover:translate-x-1 transition-transform" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: item.link, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-6 w-6 text-cyan-400 group-hover:translate-x-1 transition-transform" }) })
           ] })
         ]
       },
@@ -21670,7 +21686,7 @@ function WhyChooseUs() {
   ] }) });
 }
 
-function App$2() {
+function App$3() {
   const testimonials = [
     {
       name: "Maria A.",
@@ -21890,14 +21906,14 @@ function Footer() {
 function LandingPage() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(App$3, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(App$4, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(WhyChooseUs, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(App$2, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(App$3, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
 }
 
-function App$1() {
+function App$2() {
   const services = [
     {
       title: "Beginner Diving Courses",
@@ -21984,7 +22000,8 @@ function App$1() {
       "© ",
       (/* @__PURE__ */ new Date()).getFullYear(),
       " IDiveCyprus. All rights reserved."
-    ] }) })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
 }
 
@@ -31025,8 +31042,7 @@ function ContactPage() {
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-cyan-500/20 p-3 rounded-full", children: /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "h-6 w-6 text-cyan-400" }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-white font-semibold mb-1", children: "Location" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300", children: "Protara 29, Protaras Cyprus," }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-300", children: "Paralimni 5296 Cyprus" })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300", children: "Protara 29 Avenue, Shop 4-6, 5296, Cyprus" })
                 ] })
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start space-x-4", children: [
@@ -31077,8 +31093,9 @@ function ContactPage() {
   ] });
 }
 
-function AboutUs() {
+function App$1() {
   const teamImageUrl = "https://images.unsplash.com/photo-1637308110286-e07eaa6ce9c6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  const missionImageUrl = "https://imgs.search.brave.com/1LKwZyTucJfA-kZX_JoDMq03OhvxbrVBO5VTTfGFqIE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/LnBhZGkuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE5LzA1/L2luc3BpcmluZ19v/Y2Vhbl9xdW90ZV9u/b3RfYWxsX2NsYXNz/cm9vbXMucG5n";
   const benefits = [
     {
       icon: Shield,
@@ -31106,67 +31123,86 @@ function AboutUs() {
       description: "We promote sustainable practices and protect the ocean as part of our core mission."
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative min-h-screen font-sans antialiased text-gray-100", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "img",
-      {
-        src: teamImageUrl,
-        alt: "Diver exploring underwater",
-        className: "fixed inset-0 w-full h-full object-cover"
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "fixed inset-0 bg-slate-900/80 backdrop-blur-sm -z-10" }),
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-slate-950 min-h-screen font-sans antialiased text-gray-100 relative", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-0 opacity-10 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-cyan-900/40 via-transparent to-transparent animate-gradient-slow" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative z-10 py-20 md:py-32", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "text-center mb-16 px-4 md:px-0", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in-up", children: [
-          "About iDive",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cyan-400", children: "Cyprus" })
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col text-center md:text-left animate-fade-in-right", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "text-5xl md:text-7xl font-bold text-white mb-4", children: [
+            "About iDive",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cyan-400", children: "Cyprus" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl md:text-2xl font-light text-gray-300 leading-relaxed mb-8", children: "Your gateway to the underwater world. We are a team of passionate, certified diving professionals who live and breathe the sea." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "a",
+            {
+              href: "/contact",
+              className: "inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 text-lg font-semibold rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50",
+              children: "Start Your Adventure"
+            }
+          )
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl md:text-2xl font-light text-gray-200 animate-fade-in-up-delay", children: "Your Gateway to the Underwater World" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative overflow-hidden rounded-3xl shadow-2xl border-2 border-slate-700 animate-fade-in-left", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "img",
+          {
+            src: teamImageUrl,
+            alt: "Diver exploring underwater",
+            className: "w-full h-full object-cover rounded-3xl transform hover:scale-105 transition-transform duration-700"
+          }
+        ) })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "mb-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-slate-900/60 rounded-3xl p-8 md:p-12 border border-slate-700 shadow-xl max-w-4xl mx-auto", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-4 text-center", children: "Welcome to iDive Cyprus" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 leading-relaxed text-center", children: "We’re a team of passionate, certified diving professionals who live and breathe the sea. From your very first breath underwater to advanced adventures, we’re here to make every dive in Cyprus safe, unforgettable, and fun." })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "mb-24 relative p-8 md:p-12 rounded-3xl border border-slate-700 shadow-2xl bg-slate-800/60 backdrop-blur-sm", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-12 items-center", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "order-2 md:order-1 relative z-10 text-center md:text-left", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-3xl md:text-4xl font-bold text-white mb-4", children: "Our Mission" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 leading-relaxed", children: "To inspire, educate, and connect people with the sea — creating safe, sustainable, and life-changing diving experiences in Cyprus. We believe in protecting the ocean as much as we love exploring it." })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "order-1 md:order-2 relative overflow-hidden rounded-2xl shadow-xl border-2 border-slate-700", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "img",
+          {
+            src: missionImageUrl,
+            alt: "Our Mission",
+            className: "w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+          }
+        ) })
       ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "mb-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mb-12", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-3xl md:text-4xl font-bold text-white mb-4", children: "Why Dive with Us?" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-4xl md:text-5xl font-bold text-white mb-4", children: "Why Dive with Us?" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 max-w-2xl mx-auto", children: "We're not just a dive center. We are your partners in discovery." })
+        ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8", children: benefits.map((benefit, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "div",
           {
-            className: "group rounded-3xl shadow-lg border border-slate-700 p-6 md:p-8 hover:transform hover:-translate-y-2 transition-all duration-300 bg-slate-900/60 backdrop-blur-sm",
+            className: "group rounded-3xl shadow-lg border border-slate-700 p-8 transform-gpu perspective-1000 transition-all duration-500 hover:rotate-y-6 hover:scale-105 bg-slate-900/60 backdrop-blur-sm",
             children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-full mb-6 group-hover:bg-cyan-500/30 transition-colors", children: /* @__PURE__ */ jsxRuntimeExports.jsx(benefit.icon, { className: "h-8 w-8 text-cyan-400" }) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-bold text-white mb-2", children: benefit.title }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-full mb-6 transition-all duration-500 group-hover:bg-cyan-500/30 group-hover:scale-110", children: /* @__PURE__ */ jsxRuntimeExports.jsx(benefit.icon, { className: "h-8 w-8 text-cyan-400" }) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-2xl font-bold text-white mb-2", children: benefit.title }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300", children: benefit.description })
             ]
           },
           index
         )) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "text-center max-w-3xl mx-auto mb-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-slate-900/60 rounded-3xl p-8 md:p-12 border border-slate-700 shadow-xl", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-3xl md:text-4xl font-bold text-white mb-4", children: "Our Mission" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl text-gray-300 leading-relaxed", children: "To inspire, educate, and connect people with the sea — creating safe, sustainable, and life-changing diving experiences in Cyprus." })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-bold text-white mb-6", children: "Dive in with us, and discover the magic beneath the waves." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Link,
-          {
-            to: "/contact",
-            className: "bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25",
-            children: "Start Your Adventure"
-          }
-        )
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("style", { children: `
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+        @keyframes fadeInRight {
+          from { opacity: 0; transform: translateX(-50px); }
+          to { opacity: 1; transform: translateX(0); }
         }
-        .animate-fade-in-up { animation: fadeIn 0.8s ease-out forwards; }
-        .animate-fade-in-up-delay { animation: fadeIn 0.8s ease-out 0.3s forwards; }
-      ` })
+        @keyframes fadeInLeft {
+          from { opacity: 0; transform: translateX(50px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes gradient-slow {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animate-fade-in-right { animation: fadeInRight 0.8s ease-out forwards; }
+        .animate-fade-in-left { animation: fadeInLeft 0.8s ease-out forwards; }
+        .animate-gradient-slow { animation: gradient-slow 15s ease infinite; background-size: 200% 200%; }
+      ` }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
 }
 
@@ -31175,9 +31211,9 @@ function App() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(LandingPage, {}) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/services", element: /* @__PURE__ */ jsxRuntimeExports.jsx(App$1, {}) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/services", element: /* @__PURE__ */ jsxRuntimeExports.jsx(App$2, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ContactPage, {}) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/about", element: /* @__PURE__ */ jsxRuntimeExports.jsx(AboutUs, {}) })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/about", element: /* @__PURE__ */ jsxRuntimeExports.jsx(App$1, {}) })
     ] })
   ] }) });
 }
