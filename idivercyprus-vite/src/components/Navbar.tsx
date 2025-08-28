@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
             <Waves className="h-8 w-8" />
-            <span className="text-xl font-bold">iDiverCyprus</span>
+            <span className="text-xl font-bold">iDiveCyprus</span>
           </Link>
 
           <div className="hidden md:flex space-x-8">

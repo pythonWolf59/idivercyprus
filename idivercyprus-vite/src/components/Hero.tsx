@@ -3,6 +3,10 @@ import { ArrowDown } from 'lucide-react';
 
 const heroImageUrl = "/images/hero.jpeg";
 
+const handleWhatsAppClick = () => {
+    window.open("https://wa.me/35799689961", "_blank");
+  };
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -24,6 +28,7 @@ export default function Hero() {
           Dive into crystal-clear waters, explore the legendary Zenobia Wreck, and experience the vibrant marine life of the Mediterranean with iDive Cyprus.
         </p>
         <Button
+          onClick={handleWhatsAppClick}
           size="lg"
           className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 text-lg font-semibold rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 animate-fade-in-up-delay-3"
         >

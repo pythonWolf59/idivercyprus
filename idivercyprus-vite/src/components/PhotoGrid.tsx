@@ -1,35 +1,40 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
-export default function PhotoGrid() {
+export default function App() {
   const experiences = [
     {
       id: 1,
       image: 'https://silentworld.com/wp-content/uploads/2024/12/AdobeStock_49656996-min-scaled.jpeg.webp',
       title: 'Courses',
-      description: 'Learn to dive with PADI & NAUI certifications.'
+      description: 'Learn to dive with PADI & NAUI certifications.',
+      link: '/courses'
     },
     {
       id: 2,
       image: '/images/Fun Dives.jpg',
       title: 'Fun Dives',
-      description: 'Explore Cyprus’s reefs, caves, and wrecks.'
+      description: 'Explore Cyprus’s reefs, caves, and wrecks.',
+      link: '/fun-dives'
     },
     {
       id: 3,
       image: '/images/cover1.jpeg',
       title: 'Specialty Dives',
-      description: 'Deep, wreck, Nitrox, night diving adventures and more.'
+      description: 'Deep, wreck, Nitrox, night diving adventures and more.',
+      link: '/specialty-dives'
     },
     {
       id: 4,
       image: 'https://www.mauiinn.com/wp-content/uploads/2025/02/Woman_Snorkeling.jpg',
       title: 'Snorkeling',
-      description: 'Family-friendly fun for non-divers.'
+      description: 'Family-friendly fun for non-divers.',
+      link: '/snorkeling'
     }
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gray-800">
+    <section className="py-20 md:py-32 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Diving Experiences</h2>
@@ -39,22 +44,27 @@ export default function PhotoGrid() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {experiences.map((item) => (
-            <div
+            <a
               key={item.id}
-              className="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-700 hover:shadow-cyan-500/20 transition-all duration-500 transform hover:-translate-y-2"
+              href={item.link}
+              className="group relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 transform hover:scale-105"
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-6 text-white transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                <div className="transform translate-y-8 transition-transform duration-500 group-hover:translate-y-0">
+                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
                   <p className="text-gray-300 text-sm">{item.description}</p>
                 </div>
               </div>
-            </div>
+              <div className="absolute inset-x-0 bottom-0 p-6 flex justify-between items-center bg-slate-800/80 backdrop-blur-sm opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+                <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                <ArrowRight className="h-6 w-6 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </a>
           ))}
         </div>
       </div>

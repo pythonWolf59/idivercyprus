@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Dive with Us?</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            With over a decade of experience in Cyprus waters, we provide safe, memorable, and professional diving experiences.
+            With over two decades of experience in Cyprus waters, we provide safe, memorable, and professional diving experiences.
           </p>
         </div>
 

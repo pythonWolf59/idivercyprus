@@ -13,11 +13,11 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 35.0146337,
-  lng: 34.0505644,
+  lat: 35.0167722,
+  lng: 34.0511104,
 };
 
-const googleMapsUrl = 'https://www.google.com/maps/place/Protara+29,+Paralimni+5296,+Cyprus/@35.0146337,34.0505644,17z/';
+const googleMapsUrl = 'https://maps.app.goo.gl/QCW73G16T9K7HdeX6?g_st=ipc';
 
 export default function ContactPage() {
   const { isLoaded } = useJsApiLoader({
