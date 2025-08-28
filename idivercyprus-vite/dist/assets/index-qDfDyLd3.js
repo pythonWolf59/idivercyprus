@@ -21565,28 +21565,28 @@ function App$4() {
       image: "https://silentworld.com/wp-content/uploads/2024/12/AdobeStock_49656996-min-scaled.jpeg.webp",
       title: "Courses",
       description: "Learn to dive with PADI & NAUI certifications.",
-      link: "/contact"
+      link: "https://wa.me/35799689961"
     },
     {
       id: 2,
       image: "/images/Fun Dives.jpg",
       title: "Fun Dives",
       description: "Explore Cyprus’s reefs, caves, and wrecks.",
-      link: "/contact"
+      link: "https://wa.me/35799689961"
     },
     {
       id: 3,
       image: "/images/cover1.jpeg",
       title: "Specialty Dives",
       description: "Deep, wreck, Nitrox, night diving adventures and more.",
-      link: "/contact"
+      link: "https://wa.me/35799689961"
     },
     {
       id: 4,
       image: "https://www.mauiinn.com/wp-content/uploads/2025/02/Woman_Snorkeling.jpg",
       title: "Snorkeling",
       description: "Family-friendly fun for non-divers.",
-      link: "/contact"
+      link: "https://wa.me/35799689961"
     }
   ];
   const handleTouch = (id) => {

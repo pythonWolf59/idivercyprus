@@ -2090,11 +2090,6 @@
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
 
-    .group-hover\:translate-y-0:is(:where(.group):hover *) {
-      --tw-translate-y: calc(var(--spacing) * 0);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-
     .group-hover\:scale-105:is(:where(.group):hover *) {
       --tw-scale-x: 105%;
       --tw-scale-y: 105%;
@@ -2117,14 +2112,6 @@
       .group-hover\:bg-cyan-500\/30:is(:where(.group):hover *) {
         background-color: color-mix(in oklab, var(--color-cyan-500) 30%, transparent);
       }
-    }
-
-    .group-hover\:opacity-0:is(:where(.group):hover *) {
-      opacity: 0;
-    }
-
-    .group-hover\:opacity-100:is(:where(.group):hover *) {
-      opacity: 1;
     }
   }
 
