@@ -166,8 +166,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1">Location</h3>
-                    <p className="text-gray-300">Protara 29, Protaras Cyprus,</p>
-                    <p className="text-300">Paralimni 5296 Cyprus</p>
+                    <p className="text-gray-300">Protara 29 Avenue, Shop 4-6, 5296, Cyprus</p>
                   </div>
                 </div>
 
