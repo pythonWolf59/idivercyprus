@@ -1,19 +1,19 @@
-import { useState } from 'react'
+import {useState} from "react";
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Waves } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
 
-  const isActive = (path: string) => location.pathname === path
+  const isActive = (path) => location.pathname === path
 
   return (
-    <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-cyan-500/20">
+    <nav className="fixed top-0 w-full bg-slate-700/95 backdrop-blur-sm z-50 border-b border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
-            <Waves className="h-8 w-8" />
+            <img src="/images/logo.jpeg" alt="iDiveCyprus Logo" className="h-10 w-10 rounded-full" />
             <span className="text-xl font-bold">iDiveCyprus</span>
           </Link>
 

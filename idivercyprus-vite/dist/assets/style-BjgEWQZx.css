@@ -1317,6 +1317,16 @@
     }
   }
 
+  .bg-slate-700\/95 {
+    background-color: #314158f2;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-slate-700\/95 {
+      background-color: color-mix(in oklab, var(--color-slate-700) 95%, transparent);
+    }
+  }
+
   .bg-slate-800 {
     background-color: var(--color-slate-800);
   }

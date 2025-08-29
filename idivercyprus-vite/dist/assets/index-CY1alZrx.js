@@ -18399,25 +18399,11 @@ const createLucideIcon = (iconName, iconNode) => {
  */
 
 
-const __iconNode$i = [
+const __iconNode$h = [
   ["path", { d: "M12 5v14", key: "s699le" }],
   ["path", { d: "m19 12-7 7-7-7", key: "1idqje" }]
 ];
-const ArrowDown = createLucideIcon("arrow-down", __iconNode$i);
-
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$h = [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
-];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$h);
+const ArrowDown = createLucideIcon("arrow-down", __iconNode$h);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18428,6 +18414,20 @@ const ArrowRight = createLucideIcon("arrow-right", __iconNode$h);
 
 
 const __iconNode$g = [
+  ["path", { d: "M5 12h14", key: "1ays0h" }],
+  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+];
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$g);
+
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$f = [
   [
     "path",
     {
@@ -18437,7 +18437,7 @@ const __iconNode$g = [
   ],
   ["circle", { cx: "12", cy: "8", r: "6", key: "1vp47v" }]
 ];
-const Award = createLucideIcon("award", __iconNode$g);
+const Award = createLucideIcon("award", __iconNode$f);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18447,22 +18447,8 @@ const Award = createLucideIcon("award", __iconNode$g);
  */
 
 
-const __iconNode$f = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$f);
-
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$e = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
-];
-const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$e);
+const __iconNode$e = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$e);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18473,10 +18459,10 @@ const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$e);
 
 
 const __iconNode$d = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
+  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
+  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
 ];
-const Clock = createLucideIcon("clock", __iconNode$d);
+const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$d);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18487,12 +18473,10 @@ const Clock = createLucideIcon("clock", __iconNode$d);
 
 
 const __iconNode$c = [
-  [
-    "path",
-    { d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z", key: "1jg4f8" }
-  ]
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
 ];
-const Facebook = createLucideIcon("facebook", __iconNode$c);
+const Clock = createLucideIcon("clock", __iconNode$c);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18503,11 +18487,12 @@ const Facebook = createLucideIcon("facebook", __iconNode$c);
 
 
 const __iconNode$b = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
-  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+  [
+    "path",
+    { d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z", key: "1jg4f8" }
+  ]
 ];
-const Globe = createLucideIcon("globe", __iconNode$b);
+const Facebook = createLucideIcon("facebook", __iconNode$b);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18518,6 +18503,21 @@ const Globe = createLucideIcon("globe", __iconNode$b);
 
 
 const __iconNode$a = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
+  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+];
+const Globe = createLucideIcon("globe", __iconNode$a);
+
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+const __iconNode$9 = [
   [
     "path",
     {
@@ -18535,22 +18535,7 @@ const __iconNode$a = [
   ["path", { d: "m18 15-2-2", key: "60u0ii" }],
   ["path", { d: "m15 18-2-2", key: "6p76be" }]
 ];
-const HeartHandshake = createLucideIcon("heart-handshake", __iconNode$a);
-
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-const __iconNode$9 = [
-  ["rect", { width: "20", height: "20", x: "2", y: "2", rx: "5", ry: "5", key: "2e1cvw" }],
-  ["path", { d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z", key: "9exkf1" }],
-  ["line", { x1: "17.5", x2: "17.51", y1: "6.5", y2: "6.5", key: "r4j83e" }]
-];
-const Instagram = createLucideIcon("instagram", __iconNode$9);
+const HeartHandshake = createLucideIcon("heart-handshake", __iconNode$9);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18561,10 +18546,11 @@ const Instagram = createLucideIcon("instagram", __iconNode$9);
 
 
 const __iconNode$8 = [
-  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
-  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
+  ["rect", { width: "20", height: "20", x: "2", y: "2", rx: "5", ry: "5", key: "2e1cvw" }],
+  ["path", { d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z", key: "9exkf1" }],
+  ["line", { x1: "17.5", x2: "17.51", y1: "6.5", y2: "6.5", key: "r4j83e" }]
 ];
-const Mail = createLucideIcon("mail", __iconNode$8);
+const Instagram = createLucideIcon("instagram", __iconNode$8);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18575,16 +18561,10 @@ const Mail = createLucideIcon("mail", __iconNode$8);
 
 
 const __iconNode$7 = [
-  [
-    "path",
-    {
-      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
-      key: "1r0f0z"
-    }
-  ],
-  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
+  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
+  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
 ];
-const MapPin = createLucideIcon("map-pin", __iconNode$7);
+const Mail = createLucideIcon("mail", __iconNode$7);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18595,11 +18575,16 @@ const MapPin = createLucideIcon("map-pin", __iconNode$7);
 
 
 const __iconNode$6 = [
-  ["path", { d: "M4 12h16", key: "1lakjw" }],
-  ["path", { d: "M4 18h16", key: "19g7jn" }],
-  ["path", { d: "M4 6h16", key: "1o0s65" }]
+  [
+    "path",
+    {
+      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+      key: "1r0f0z"
+    }
+  ],
+  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
 ];
-const Menu = createLucideIcon("menu", __iconNode$6);
+const MapPin = createLucideIcon("map-pin", __iconNode$6);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18610,15 +18595,11 @@ const Menu = createLucideIcon("menu", __iconNode$6);
 
 
 const __iconNode$5 = [
-  [
-    "path",
-    {
-      d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
-      key: "9njp5v"
-    }
-  ]
+  ["path", { d: "M4 12h16", key: "1lakjw" }],
+  ["path", { d: "M4 18h16", key: "19g7jn" }],
+  ["path", { d: "M4 6h16", key: "1o0s65" }]
 ];
-const Phone = createLucideIcon("phone", __iconNode$5);
+const Menu = createLucideIcon("menu", __iconNode$5);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18632,12 +18613,12 @@ const __iconNode$4 = [
   [
     "path",
     {
-      d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
-      key: "oel41y"
+      d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
+      key: "9njp5v"
     }
   ]
 ];
-const Shield = createLucideIcon("shield", __iconNode$4);
+const Phone = createLucideIcon("phone", __iconNode$4);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18651,12 +18632,12 @@ const __iconNode$3 = [
   [
     "path",
     {
-      d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
-      key: "r04s7s"
+      d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
+      key: "oel41y"
     }
   ]
 ];
-const Star = createLucideIcon("star", __iconNode$3);
+const Shield = createLucideIcon("shield", __iconNode$3);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18667,12 +18648,15 @@ const Star = createLucideIcon("star", __iconNode$3);
 
 
 const __iconNode$2 = [
-  ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
-  ["path", { d: "M16 3.128a4 4 0 0 1 0 7.744", key: "16gr8j" }],
-  ["path", { d: "M22 21v-2a4 4 0 0 0-3-3.87", key: "kshegd" }],
-  ["circle", { cx: "9", cy: "7", r: "4", key: "nufk8" }]
+  [
+    "path",
+    {
+      d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
+      key: "r04s7s"
+    }
+  ]
 ];
-const Users = createLucideIcon("users", __iconNode$2);
+const Star = createLucideIcon("star", __iconNode$2);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18683,29 +18667,12 @@ const Users = createLucideIcon("users", __iconNode$2);
 
 
 const __iconNode$1 = [
-  [
-    "path",
-    {
-      d: "M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
-      key: "knzxuh"
-    }
-  ],
-  [
-    "path",
-    {
-      d: "M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
-      key: "2jd2cc"
-    }
-  ],
-  [
-    "path",
-    {
-      d: "M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
-      key: "rd2r6e"
-    }
-  ]
+  ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
+  ["path", { d: "M16 3.128a4 4 0 0 1 0 7.744", key: "16gr8j" }],
+  ["path", { d: "M22 21v-2a4 4 0 0 0-3-3.87", key: "kshegd" }],
+  ["circle", { cx: "9", cy: "7", r: "4", key: "nufk8" }]
 ];
-const Waves = createLucideIcon("waves", __iconNode$1);
+const Users = createLucideIcon("users", __iconNode$1);
 
 /**
  * @license lucide-react v0.511.0 - ISC
@@ -18725,10 +18692,10 @@ function Navbar() {
   const [isOpen, setIsOpen] = reactExports.useState(false);
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("nav", { className: "fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-cyan-500/20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("nav", { className: "fixed top-0 w-full bg-slate-700/95 backdrop-blur-sm z-50 border-b border-cyan-500/20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between items-center h-16", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/", className: "flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Waves, { className: "h-8 w-8" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/logo.jpeg", alt: "iDiveCyprus Logo", className: "h-10 w-10 rounded-full" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl font-bold", children: "iDiveCyprus" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden md:flex space-x-8", children: [
@@ -21889,17 +21856,21 @@ function Footer() {
         ] })
       ] })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center sm:items-start md:flex-row md:items-end md:justify-between mt-8 md:mt-12 pt-8 border-t border-slate-700", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center md:flex-row md:items-end md:justify-between mt-8 md:mt-12 pt-8 border-t border-slate-700", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center md:items-start mb-6 md:mb-0", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-400 text-sm mb-2", children: "Platinum Pro Dive Center #AF1396" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex space-x-4 items-center", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/Naui.jpg", alt: "NAUI Logo", className: "h-16 w-auto rounded-lg shadow-lg" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/NauiLogo.jpg", alt: "NAUI Logo 2", className: "h-16 w-auto rounded-lg shadow-lg" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/NauiMember.jpg", alt: "NAUI Member Logo", className: "h-16 w-auto rounded-lg shadow-lg" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/Naui.jpg", alt: "NAUI Member", className: "h-16 w-auto rounded-lg shadow-lg" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/NauiLogo.jpg", alt: "NAUI Logo", className: "h-16 w-auto rounded-lg shadow-lg" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/NauiMember.jpg", alt: "NAUI Certificied", className: "h-16 w-auto rounded-lg shadow-lg" })
         ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-400 text-sm", children: "© 2025 iDiveCyprus. All rights reserved." })
-    ] })
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center md:items-end", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-400 text-sm mb-2", children: "PADI Elite Instructors 2024-2025" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex space-x-4 items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/PADI logo.jpeg", alt: "PADI Registeration", className: "h-16 w-auto rounded-lg shadow-lg" }) })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-400 text-sm text-center", children: " IDiveCyprus 2025 All Rights Reserved" })
   ] }) });
 }
 
@@ -21960,7 +21931,7 @@ function App$2() {
         ] }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-6 pb-6 md:px-8 md:pb-8", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-300 mb-6", children: service.description }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/contact", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { className: "w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25", children: "Explore Now" }) })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://wa.me/35799689961", target: "_blank", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { className: "w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25", children: "Explore Now" }) })
         ] })
       ] }, index)) }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mt-24 mb-16", children: [
