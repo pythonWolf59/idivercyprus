@@ -21870,7 +21870,7 @@ function Footer() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex space-x-4 items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/PADI logo.jpeg", alt: "PADI Registeration", className: "h-16 w-auto rounded-lg shadow-lg" }) })
       ] })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-400 text-sm text-center", children: " IDiveCyprus 2025 All Rights Reserved" })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col items-center md:items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { className: "h-15 w-15 rounded-full", src: "/images/logo.jpeg" }) })
   ] }) });
 }
 

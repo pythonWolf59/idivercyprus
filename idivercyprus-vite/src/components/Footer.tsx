@@ -125,7 +125,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-          <p className="text-gray-400 text-sm text-center"> IDiveCyprus 2025 All Rights Reserved</p>
+          <div className="flex flex-col items-center md:items-center">
+              <img className="h-15 w-15 rounded-full" src="/images/logo.jpeg"></img>
+          </div>
       </div>
     </footer>
   )
