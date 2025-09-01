@@ -31136,7 +31136,7 @@ function App$1() {
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             "a",
             {
-              href: "/contact",
+              href: "https://wa.me/35799689961",
               className: "inline-block bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 text-lg font-semibold rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50",
               children: "Start Your Adventure"
             }
