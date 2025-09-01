@@ -59,7 +59,7 @@ export default function App() {
 
               <div className="px-6 pb-6 md:px-8 md:pb-8">
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <a href="/contact">
+                <a href="https://wa.me/35799689961" target="_blank">
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">
                     Explore Now
                   </button>

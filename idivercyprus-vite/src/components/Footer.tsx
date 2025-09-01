@@ -108,23 +108,26 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* New Logos Section */}
-        <div className="flex flex-col items-center sm:items-start md:flex-row md:items-end md:justify-between mt-8 md:mt-12 pt-8 border-t border-slate-700">
+          {/* New Logos Section */}
+        <div className="flex flex-col items-center md:flex-row md:items-end md:justify-between mt-8 md:mt-12 pt-8 border-t border-slate-700">
           <div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
             <p className="text-gray-400 text-sm mb-2">Platinum Pro Dive Center #AF1396</p>
             <div className="flex space-x-4 items-center">
-              <img src="/images/Naui.jpg" alt="NAUI Logo" className="h-16 w-auto rounded-lg shadow-lg" />
-              <img src="/images/NauiLogo.jpg" alt="NAUI Logo 2" className="h-16 w-auto rounded-lg shadow-lg" />
-              <img src="/images/NauiMember.jpg" alt="NAUI Member Logo" className="h-16 w-auto rounded-lg shadow-lg" />
+              <img src="/images/Naui.jpg" alt="NAUI Member" className="h-16 w-auto rounded-lg shadow-lg" />
+              <img src="/images/NauiLogo.jpg" alt="NAUI Logo" className="h-16 w-auto rounded-lg shadow-lg" />
+              <img src="/images/NauiMember.jpg" alt="NAUI Certificied" className="h-16 w-auto rounded-lg shadow-lg" />
             </div>
           </div>
-
-          <p className="text-gray-400 text-sm">
-            © 2025 iDiveCyprus. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center md:items-end">
+            <p className="text-gray-400 text-sm mb-2">PADI Elite Instructors 2024-2025</p>
+            <div className="flex space-x-4 items-center">
+              <img src="/images/PADI logo.jpeg" alt="PADI Registeration" className="h-16 w-auto rounded-lg shadow-lg" />
+            </div>
+          </div>
         </div>
-
-        
+          <div className="flex flex-col items-center md:items-center">
+              <img className="h-15 w-15 rounded-full" src="/images/logo.jpeg"></img>
+          </div>
       </div>
     </footer>
   )
