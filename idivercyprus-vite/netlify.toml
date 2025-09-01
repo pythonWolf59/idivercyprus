@@ -1,0 +1,5 @@
+[build]
+  publish = "dist" # Or whatever your build directory is
+
+[context.production]
+  environment = { INJECT_BUILD_ID = "false" }
